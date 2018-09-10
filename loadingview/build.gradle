@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+
+}
+
+dependencies {
+    implementation("com.android.support:appcompat-v7:27.1.1") {
+        exclude module: 'support-compat'
+        exclude module: 'support-core-ui'
+        exclude module: 'support-core-utils'
+        exclude module: 'animated-vector-drawable'
+        exclude module: 'support-vector-drawable'
+    }
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}
