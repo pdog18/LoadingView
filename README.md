@@ -1,10 +1,14 @@
-# LoadingView
+# 半行代码实现LoadingView
 
 ## 使用
 
-实现`LoadingView` 接口，然后就可以调用`loadingFinish()`等方法
+实现`LoadingView` 接口，
 
+```kotlin
+    class MainActivity : Activity(), LoadingView {}
+```
 
+然后就可以调用`loadingFinish()`等方法
 
 ```kotlin
 
